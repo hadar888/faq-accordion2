@@ -1,0 +1,26 @@
+$soft-violet: hsl(273, 75%, 66%);
+$soft-blue: hsl(240, 73%, 65%);
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient($soft-violet, $soft-blue);
+    min-height: 100%;
+    margin: 0;
+}
+
+section {
+    display: flex;
+    background-image: url('images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-color: white;
+    width: 900px;
+    border-radius: 20px;
+}
