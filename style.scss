@@ -1,13 +1,20 @@
 $soft-violet: hsl(273, 75%, 66%);
 $soft-blue: hsl(240, 73%, 65%);
 
+$text-very-dark-grayish-blue: hsl(237, 12%, 33%);
+$text-dark-grayish-blue: hsl(240, 6%, 50%);
+
+$very-dark-desaturated-blue: hsl(238, 29%, 16%);
+$soft-red: hsl(14, 88%, 65%);
+
 html {
-    font-family: "Kumbh Sans";
     height: 100%;
     width: 100%;
 }
 
 body {
+    color: $text-dark-grayish-blue;
+    font-family: "Kumbh Sans";
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,4 +31,23 @@ section {
     background-color: white;
     width: 900px;
     border-radius: 20px;
+}
+
+h1 {
+    color: $very-dark-desaturated-blue;
+    font-weight: 700;
+    font-size: 33px;
+}
+
+.question {
+    font-size: 14px;
+}
+
+.ans {
+    font-size: 12px;
+}
+
+.selected {
+    font-weight: 700;
+    color: $very-dark-desaturated-blue;
 }
