@@ -33,6 +33,11 @@ section {
     border-radius: 20px;
 }
 
+.container {
+    width: 100%;
+
+}
+
 h1 {
     color: $very-dark-desaturated-blue;
     font-weight: 700;
@@ -41,13 +46,26 @@ h1 {
 
 .question {
     font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question:hover:not(.selected) {
+    color: $soft-red;
 }
 
 .ans {
     font-size: 12px;
+    display: none;
 }
 
 .selected {
     font-weight: 700;
     color: $very-dark-desaturated-blue;
+}
+
+.icon {
+    width: 10px;
+    height: 10px;
 }
