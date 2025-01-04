@@ -28,16 +28,43 @@ body {
 
 section {
     display: flex;
+    background-color: white;
+    width: 920px;
+    border-radius: 20px;
+    position: relative;
+
+    .small-image {
+        position: absolute;
+        z-index: 1;
+        right: 89%;
+        top: 42%;
+    }
+}
+
+.img-container {
     background-image: url('images/bg-pattern-desktop.svg');
     background-repeat: no-repeat;
-    background-color: white;
-    width: 900px;
-    border-radius: 20px;
-    padding: 40px 90px 80px 0px;
+    background-size: 1000px;
+    background-position: -600px -310px;
+    width: 400px;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    overflow: hidden;
+
+    .big-image {
+        position: absolute;
+        right: 0;
+        top: 16%;
+        width: 460px;
+    }
 }
 
 .container {
-    width: 100%;
+    margin: 40px 90px 80px 0px;
+    width: 520px;
 }
 
 h1 {
