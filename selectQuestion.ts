@@ -1,4 +1,4 @@
-let selectedQuestion  = '1';
+let selectedQuestion = '-1';
 
 const selectQuestion = (id: string) => {
     const prevFaq = document.getElementById(selectedQuestion);
@@ -8,17 +8,24 @@ const selectQuestion = (id: string) => {
     if (prevImagePart) {
         prevImagePart.style.transform = 'rotate(0)';
     }
-    const prevAnsPart = prevFaq?.getElementsByClassName('ans')[0] as HTMLElement;
-    prevAnsPart.style.display = 'none';
-
-    selectedQuestion = id;
-    const selectedFaq = document.getElementById(selectedQuestion);
-    const questionPart = selectedFaq?.getElementsByClassName('question')[0];
-    questionPart?.classList.add('selected');
-    const imagePart = questionPart?.getElementsByTagName('img')[0];
-    if (imagePart) {
-        imagePart.style.transform = 'rotate(180deg)';
+    const prevAnsPart = prevFaq?.getElementsByClassName('ans')[0] as HTMLElement | undefined;
+    if (prevAnsPart) {
+        prevAnsPart.style.height = '0';
     }
-    const ansPart = selectedFaq?.getElementsByClassName('ans')[0] as HTMLElement;
-    ansPart.style.display = 'block';
+
+    if (id !== selectedQuestion) {
+        selectedQuestion = id;
+        const selectedFaq = document.getElementById(selectedQuestion);
+        const questionPart = selectedFaq?.getElementsByClassName('question')[0];
+        questionPart?.classList.add('selected');
+        const imagePart = questionPart?.getElementsByTagName('img')[0];
+        if (imagePart) {
+            imagePart.style.transform = 'rotate(180deg)';
+        }
+        const ansPart = selectedFaq?.getElementsByClassName('ans')[0] as HTMLElement;
+        ansPart.style.height = ansPart.scrollHeight + 'px';
+    }
+    else {
+        selectedQuestion = '-1';
+    }
 }
