@@ -12,6 +12,7 @@ $light-grayish-blue: hsl(240, 5%, 91%);
 html {
     height: 100%;
     width: 100%;
+    font-size: 14px;
 }
 
 body {
@@ -33,6 +34,7 @@ section {
     height: 500px;
     border-radius: 20px;
     position: relative;
+    box-shadow: 0px 20px 20px 11px #6e67bb;
 
     .small-image {
         position: absolute;
@@ -47,7 +49,7 @@ section {
     background-repeat: no-repeat;
     background-size: 1000px;
     background-position: -610px -310px;
-    width: 460px;
+    width: 32.85rem;
 
     display: flex;
     align-items: center;
@@ -59,7 +61,7 @@ section {
         position: absolute;
         right: 0;
         top: 13%;
-        width: 460px;
+        width: 32.85rem;
     }
 }
 
@@ -71,7 +73,7 @@ section {
 h1 {
     color: $very-dark-desaturated-blue;
     font-weight: 700;
-    font-size: 33px;
+    font-size: 2.35rem;
 }
 
 .faq {
@@ -83,7 +85,6 @@ h1 {
 }
 
 .question {
-    font-size: 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -96,7 +97,7 @@ h1 {
 }
 
 .ans {
-    font-size: 12px;
+    font-size: 0.85rem;
     height: 0;
     overflow: hidden;
     transition: height 0.5s ease;
@@ -115,4 +116,50 @@ h1 {
 .divider {
     height: 1px;
     background-color: $light-grayish-blue;
+    width: 100%;
 }
+
+@media only screen and (max-width: 400px) {
+    html {
+      font-size: 13px;
+    }
+
+    section{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: auto;
+        margin: 150px 25px 10px 25px;
+
+        .small-image {
+            width: 95px;
+            right: 56%;
+            top: -36px;
+        }
+    }
+
+    .img-container {
+        width: auto;
+        position: absolute;
+        background-size: cover;
+        background-position: 0;
+        top: -118px;
+        height: 215px;
+
+        .big-image {
+            position: unset;
+            right: 0;
+            top: 13%;
+            width: 16.8rem;
+        }
+    }
+
+    .container {
+        padding: 20px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px;
+    }
+  }
