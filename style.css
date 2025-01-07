@@ -1,0 +1,148 @@
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  body {
+    color: hsl(240, 6%, 50%);
+    font-family: "Kumbh Sans";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    min-height: 100%;
+    margin: 0;
+  }
+  
+  section {
+    display: flex;
+    background-color: white;
+    width: 920px;
+    height: 500px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0px 20px 20px 11px #6e67bb;
+  }
+  section .small-image {
+    position: absolute;
+    z-index: 1;
+    right: 89%;
+    top: 38%;
+  }
+  
+  .img-container {
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    background-position: -610px -310px;
+    width: 32.85rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .img-container .big-image {
+    position: absolute;
+    right: 0;
+    top: 13%;
+    width: 32.85rem;
+  }
+  
+  .container {
+    padding: 30px 90px 80px 80px;
+    width: 425px;
+  }
+  
+  h1 {
+    color: hsl(238, 29%, 16%);
+    font-weight: 700;
+    font-size: 2.35rem;
+  }
+  
+  .faq {
+    padding: 15px 0 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 10px;
+  }
+  
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.5s ease;
+  }
+  
+  .question:hover:not(.selected) {
+    color: hsl(14, 88%, 65%);
+  }
+  
+  .ans {
+    font-size: 0.85rem;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+  }
+  
+  .selected {
+    font-weight: 700;
+    color: hsl(238, 29%, 16%);
+  }
+  
+  .icon {
+    height: 8px;
+    transition: transform 0.5s ease;
+  }
+  
+  .divider {
+    height: 1px;
+    background-color: hsl(240, 5%, 91%);
+    width: 100%;
+  }
+  
+  @media only screen and (max-width: 400px) {
+    html {
+      font-size: 13px;
+    }
+    section {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      width: auto;
+      margin: 150px 25px 10px 25px;
+    }
+    section .small-image {
+      width: 95px;
+      right: 56%;
+      top: -36px;
+    }
+    .img-container {
+      width: auto;
+      position: absolute;
+      background-size: cover;
+      background-position: 0;
+      top: -118px;
+      height: 215px;
+    }
+    .img-container .big-image {
+      position: unset;
+      right: 0;
+      top: 13%;
+      width: 16.8rem;
+    }
+    .container {
+      padding: 20px;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 80px;
+    }
+  }
+  
+  /*# sourceMappingURL=style.css.map */
+  
