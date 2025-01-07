@@ -1,5 +1,10 @@
 {
+  "scripts": {
+    "build": "tsc && sass style.scss dist/styles.css && copy index.html dist\\index.html",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "sass": "^1.83.0"
   }
 }
